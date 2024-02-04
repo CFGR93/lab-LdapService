@@ -1,4 +1,4 @@
 ldap:
   url: ldap://10.0.0.5:389
-  userDn: cn=dev-01,dc=tmsa,dc=local
-  password: Pulse01Dev
+  userDn: uid=test01,cn=test01,dc=tmsa,dc=local
+  password: hacerPruebas23
