@@ -21,12 +21,10 @@ public class LdapConfig {
     @Bean
     public LdapContextSource contextSource() {
         LdapContextSource contextSource = new LdapContextSource();
-        System.out.println("Url: " + ldapUrl );
-        System.out.println("usr: " + ldapUserDn );
-        System.out.println("pass: " + ldapPassword );
         contextSource.setUrl(ldapUrl);
         contextSource.setUserDn(ldapUserDn);
         contextSource.setPassword(ldapPassword);
+        contextSource.afterPropertiesSet();
         return contextSource;
     }
 
