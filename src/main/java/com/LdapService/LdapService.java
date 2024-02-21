@@ -12,10 +12,21 @@ public class LdapService {
 
     public void cnnLdapConnection() {
         try {
-            ldapTemplate.list("");
+            var lst = ldapTemplate.list("dc=example,dc=org");
+            System.out.println(lst);
             System.out.println("Conexión LDAP exitosa.");
         } catch (Exception e) {
             System.err.println("Error al conectar con LDAP: " + e.getMessage());
+        }
+    }
+
+    public void auth() {
+        try {
+            var result = ldapTemplate.authenticate("cn=test 1,ou=users,dc=example,dc=org", "objectClass=*", "Test789");
+            System.out.println("Autenticación LDAP: "+ result);
+        }
+        catch (Exception e){
+            System.err.println("Error al autenticar con LDAP: " + e.getMessage());
         }
     }
 }

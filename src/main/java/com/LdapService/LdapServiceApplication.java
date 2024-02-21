@@ -19,7 +19,8 @@ import java.util.Scanner;
 	@Override
 	public void run(String... args) {
 		try {
-			ldapService.cnnLdapConnection();
+			//ldapService.cnnLdapConnection();
+			ldapService.auth();
 		}catch (Exception e) {
 			System.err.println("Error al ejecutar la app: " + e.getMessage());
 		}
