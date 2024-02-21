@@ -21,6 +21,7 @@ import java.util.Scanner;
 		try {
 			//ldapService.cnnLdapConnection();
 			ldapService.auth();
+			ldapService.findUser("test 1");
 		}catch (Exception e) {
 			System.err.println("Error al ejecutar la app: " + e.getMessage());
 		}

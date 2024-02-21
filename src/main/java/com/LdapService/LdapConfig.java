@@ -24,7 +24,7 @@ public class LdapConfig {
         contextSource.setUrl(ldapUrl);
         contextSource.setUserDn(ldapUserDn);
         contextSource.setPassword(ldapPassword);
-        contextSource.afterPropertiesSet();
+        contextSource.afterPropertiesSet(); // Necesario para inicializar
         return contextSource;
     }
 
